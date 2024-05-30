@@ -229,10 +229,14 @@
     function saveIncome(){
         allTransaction.value.push({
             id: Math.random(),
-            date: incomeDate,
-            des: incomeDes,
-            amount: incomeAmount
+            date: incomeDate.value,
+            des: incomeDes.value,
+            amount: incomeAmount.value
         });
+        incomeDate.value = null;
+        incomeDes.value = null;
+        incomeAmount.value = null;
+        // allTransaction.value = []
     }
 </script>
 
